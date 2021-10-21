@@ -1,0 +1,221 @@
+.header {
+    height: 12rem;
+    background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.header__navbar-item {
+    position: relative;
+    margin: 0 0.8rem;
+    min-height: 1.6rem;
+}
+
+.header__navbar-item:hover,
+.header__navbar-item-link:hover,
+.header__navbar-icon-link:hover {
+    color: rgba(256, 256, 256, 0.7);
+    cursor: pointer;
+}
+
+.header__navbar-item,
+.header__navbar-item-link {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header__navbar-item,
+.header__navbar-item-link,
+.eader__navbar-icon-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__navbar-item--strong {
+    font-weight: 400;
+}
+
+.header__navbar-item--saparate::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-right: 3px solid #FB9086;
+    height: 1.6rem;
+    top: 0;
+    right: -1.1rem;
+}
+
+.header__navbar-item--has-qr:hover .header__qr {
+    display: block;
+}
+
+.header__navbar-icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.header__navbar-icon {
+    font-size: 1.8rem;
+    margin: 0 0.4rem;
+}
+
+.header__navbar-item--span {
+    cursor: text;
+    color: var(--white-color);
+    margin-right: 2.4px;
+}
+
+/* Header QR code*/
+.header__qr {
+    width: 19rem;
+    position: absolute;
+    background-color: var(--white-color);
+    left: 0;
+    top: 200%;
+    padding: 16px;
+    border-radius: 4px;
+    display: none;
+    animation: fadeIn ease .8s;
+}
+
+.header__qr::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+    left: 0;
+    top: -3rem;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-apps {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header__qr-dowload-ios{
+    margin-left: 1.1rem;
+}  
+
+.header__qr-dowload-android{
+    margin-right: 1.1rem;
+}
+
+.header__qr-dowload-img {
+    height: 1.4rem;
+}
+/* end QR code */
+
+/* begin thông báo */
+.header__notify {
+    position: absolute;
+    top: 200%;
+    right: 0;
+    width: 40.4rem;
+    height: 35rem;
+    background-color: var(--white-color);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    display: none;
+    animation: Grow ease 0.2s;
+    transform-origin: calc(100% - 20px) top;
+    border-radius: 12px;
+    cursor: context-menu;
+}
+
+.header__notify::before {   
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+    left: 0;
+    top: -1.8rem;
+}
+
+.header__notify::after { 
+    content: "";
+    border-width: 20px 28px ;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 12px;
+    top: -32px;
+}
+
+.header__notify-content {
+    height: calc(35rem - 3.2rem);
+}
+
+.header__notify-content-img {
+    width: 100px;
+    margin: 100px 154px 0px 154px;
+}
+
+.header__notify-content-desrciotion {
+    color: black;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+}
+
+.header__notify-foot {
+    height: 32px;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.header__notify-foot-register-register {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 0 0 0 6px;
+
+}
+
+.header__notify-foot-register-login {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 0 0 6px 0;
+}
+
+.header__notify-foot-register-register:hover {
+    background-color: #9999;
+    color: #fb5731;
+}
+
+.header__notify-foot-register-login:hover {
+    background-color: #9999;
+    color: #fb5731;
+}
+
+.header__navbar-item-link:hover .header__notify {
+    display: block;
+} 
+/* end thông báo */
+
+
