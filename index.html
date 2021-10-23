@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shopee</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
 </head>
 <body>
     <div class="app">
@@ -61,7 +61,7 @@
                             <i class="header__navbar-icon fas fa-question-circle"></i>
                             Trợ giúp
                         </a></li>
-                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--saparate">Đăng ký</li>
+                        <div class="header__navbar-item header__navbar-item--strong header__navbar-item--saparate">Đăng ký</div>
                         <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
                     </ul>
                 </nav>
@@ -78,12 +78,99 @@
 <!-- begin modal -->
         <div class="modal">
             <div class="modal__overlay"></div>
+                <div class="modal__body">
 
-            <div class="modal__body">
-                <div class="modal__body-inner">
-                    
+                <!-- begin register form -->
+
+                     <!-- <div class="auth-form"> 
+                        <div class="auth-form__container">
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__heading">Đăng ký</h3>
+                                <span class="auth-form__switch-btn">Đăng nhập</span>
+                            </div>
+
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                                </div>
+                            </div>
+
+                            <div class="auth-form__aside">
+                                <p class="auth-form__policy-text">
+                                    Bằng việc đăng ký, bạn đã đồng ý với Ximvhs về
+                                    <a href="#" class="auth-form__text-link">Điều khoản dịch vụ</a> & 
+                                    <a href="#" class="auth-form__text-link">Chính sách bảo mật</a>
+                                </p>
+                            </div>
+
+                            <div class="auth-form__controls">
+                                <button class="btn btn--normal auth-form__controls--back">TRỞ LẠI</button>
+                                <button class="btn btn--normal btn--primary">ĐĂNG KÝ</button>
+                            </div>
+                        </div>
+
+                        <div class="auth-form__socials">
+                            <a href="#" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                                <span class="auth-form__socials-text">Kết nối Facebook</span>
+                            </a>
+                            <a href="#" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fab fa-google"></i>
+                                <span class="auth-form__socials-text">Kết nối Google</span>
+                            </a>
+                        </div>
+                    </div> -->
+
+                <!-- end register form -->
+
+                <!-- begin login -->
+                     <div class="auth-form"> 
+                        <div class="auth-form__container">
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__heading">Đăng nhập</h3>
+                                <span class="auth-form__switch-btn">Đăng ký</span>
+                            </div>
+
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                                </div>
+                            </div>
+
+                            <div class="auth-form__aside">
+                              <div class="auth-form__help">
+                                  <a href="" class="auth-form__help-link">Quên mật khẩu</a>
+                              </div>
+                            </div>
+
+                            <div class="auth-form__controls">
+                                <button class="btn btn--normal auth-form__controls--back">TRỞ LẠI</button>
+                                <button class="btn btn--normal btn--primary">ĐĂNG NHẬP</button>
+                            </div>
+                        </div>
+
+                        <div class="auth-form__socials">
+                            <a href="#" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                                <span class="auth-form__socials-text">Kết nối Facebook</span>
+                            </a>
+                            <a href="#" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fab fa-google"></i>
+                                <span class="auth-form__socials-text">Kết nối Google</span>
+                            </a>
+                        </div>
+                    </div>
+                <!-- end login -->
                 </div>
-            </div>
         </div>
 <!-- end modal -->
     </div>

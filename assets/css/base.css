@@ -2,6 +2,8 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --primary-color:#EE4D2D;
+    --border-color: #bdbdbd;
 }
 
 * {
@@ -51,6 +53,15 @@ html {
     }
 }
 
+@keyframes Growth {
+    from  {
+        transform: scale(--growth-from);
+    }
+    to  {
+        transform: scale(--grow-to);
+    }
+}
+
 .modal  {
     position: fixed;
     top: 0;
@@ -58,6 +69,8 @@ html {
     right: 0;
     left: 0;
     display: flex;
+    animation: fadeIn linear 0.1s;
+    display: none;
 }
 
 .modal__overlay {
@@ -68,12 +81,50 @@ html {
 }  
 
 .modal__body {
-    position: relative;
-    width: 500px;
-    height: 300px;
-    background-color: var(--white-color);
+    --grow-from: 0.5;
+    --grow-to: 1;
+    position: relative;;
     margin: auto;
     z-index: 1;
+    animation: Grow linear 0.2s;
 }
+
+/* button style */
+.btn {
+    min-width: 142px;
+    height: 34px;
+    font-size: 1.3rem;
+    padding: 0 12px;
+    border: none;
+    /* background-color: var(--white-color);
+    color: var(--text-color); */
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn-size-s {
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+
+
+.btn--normal:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--primary-color);
+}
+
+.btn.btn--primary   {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+
 
 
