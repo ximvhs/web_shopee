@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopee</title>
+    <link rel="icon" href="./assets/img/avt.jpg" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +22,7 @@
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--saparate">
                             Vào cửa hàng ứng dụng Ximvhs
+
                             <!-- QR code -->
                             <div class="header__qr">
                                 <img src="./assets/img/app_shopee.png" alt="QR code" class="header__qr-img">
@@ -29,6 +31,7 @@
                                     <a href="https://play.google.com/store/apps/details?id=com.shopee.vn&hl=vi&gl=US" class="header__qr-dowload-android"><img class="header__qr-dowload-img" src="./assets/img/app_play.png" alt=""></a>
                                 </div>
                             </div>
+
                         </li>
                         <li class="header__navbar-item">
                             <span class="header__navbar-item--span">Kết nối</span>
@@ -44,6 +47,7 @@
                         <li class="header__navbar-item"><a href="" class="header__navbar-item-link">
                             <i class="header__navbar-icon fas fa-bell"></i>
                             Thông báo
+
                             <!-- begin thông báo -->
                             <div class="header__notify">
                                <div class="header__notify-content">
@@ -56,20 +60,227 @@
                                </footer>
                             </div>
                             <!-- end thông báo -->
+
                         </a></li>
-                        <li class="header__navbar-item"><a href="" class="header__navbar-item-link">
-                            <i class="header__navbar-icon fas fa-question-circle"></i>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fas fa-question-circle"></i>
                             Trợ giúp
-                        </a></li>
-                        <div class="header__navbar-item header__navbar-item--strong header__navbar-item--saparate">Đăng ký</div>
-                        <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
+                            </a>
+                        </li>
+                        <!-- <div class="header__navbar-item header__navbar-item--strong header__navbar-item--saparate">Đăng ký</div>
+                        <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li> -->
+                        <li class="header__navbar-item header__navbar-user">
+                            <img src="./assets/img/avt.jpg" alt="ảnh bị lỗi" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Vũ Hồng Sơn</span>
+
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="#">Tài khoản của tôi</a>
+                                    <a href="#">Đơn mua</a>
+                                    <a href="#login">Đăng Xuất</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
+
+                <div class="header-with-search">
+                    <a href="#" class="header__logo-link">
+                        <div class="header-with-logo">
+                            <i class="header-with-logo--img fab fa-shopify"></i>
+                        </div>
+                    </a>
+
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="#">Người yêu giá rẻ</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="#">Mua tiền số lượng lớn</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="header__search-seletion">
+                            <span class="header__search-seletion-label">
+                                Trong shop 
+                            </span>
+                            <i class="header__search-seletion-icon fas fa-angle-down"></i>
+
+                            <ul class="header__search-option">
+                                <li class="header__search-option-item header__search-option-item--active">
+                                    <span>Trong shop</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                                <li class="header__search-option-item">
+                                    <span>Ngoài shop</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button class="header__search-btn btn--bland">
+                            <i class="header__search-btn-icon fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <!-- begin cart  -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fas fa-cart-plus"></i>
+                            <span class="header__cart-notice">3</span>
+
+
+                            <!--if No cart: header__cart-list--no-cart  -->
+                            <div class="header__cart-list ">
+                                <img src="./assets/img/no_cart.png" alt="ảnh bị lỗi" class="header__cart-list--no-cart-img">
+                                <span class="header__cart-list--no-cart-msg">Chưa có sản phẩm</span>
+
+                                <!-- has product -->
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item">
+                                    <!-- cart item -->
+                                    <li class="header__cart-item">
+                                        <img src="./assets/img/apple_watch.jpg" alt="ảnh bị lỗi" class="header__cart-img">
+
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Apple Watch Series 6</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">9.690.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">Đồ công nghệ</span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="header__cart-item">
+                                        <img src="./assets/img/iphone-12.jpg" alt="ảnh bị lỗi" class="header__cart-img">
+
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Iphone 12 Pro Max 512GB</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">35.999.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">1</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">Đồ công nghệ</span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="header__cart-item">
+                                        <img src="./assets/img/keychronk34.png" alt="ảnh bị lỗi" class="header__cart-img">
+
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Bàn phím keychron k3v2</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2.190.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">1</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">Đồ công nghệ</span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+
+                                            </div>
+                                        </div>
+                                    </li> 
+                                </ul>
+
+                                <button class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end cart -->
+
+                </div>
             </div>
         </header>   
 
-        <div class="container">
+        <div class="app_container">
+            <div class="grid">
+                <div class="grid__row app__container">
+                    <div class="grid__colum-2">
+                        <nav class="category">
+                            <h3 class="caterory__heading">
+                                <i class="caterory__heading-icon fas fa-list"></i>
+                                Danh mục
+                            </h3>
+            
+                            <ul class="category-list category-list--active">
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link-heading">Sản phẩm</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Máy tính bảng</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Iphone</a>
+                                </li>
+                                 <li class="category-item">
+                                    <a href="#" class="category-item__link">Laptop</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+ 
+                    <div class="grid__colum-10">
+                        <div class="home-fitler">
+                            <span class="home-fitler__label">Sắp xếp theo</span>
+                            <button class="btn">Phổ biến</button>
+                            <button class="btn btn--primary">Mới nhất</button>
+                            <button class="btn">Bán chạy</button>
 
+                            <div class="select-input">
+                                <span class="select-input_label">Giá</span>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+
+                            <div class="home-fitler__page">
+                                <span class="home-fitler__page-num">
+                                    <span class="home-fitler__page-current">1</span>/14
+                                </span>
+
+                                <div class="home-fitler__page-control">
+                                    <a class="home-fitler__page-btn">
+                                        <i class="fas fa-angle-left"></i>
+                                    </a>
+                                    <a class="home-fitler__page-btn">
+                                        <i class="fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer class="footer">
@@ -81,8 +292,7 @@
                 <div class="modal__body">
 
                 <!-- begin register form -->
-
-                     <!-- <div class="auth-form"> 
+                     <div class="auth-form">  
                         <div class="auth-form__container">
                             <div class="auth-form__header">
                                 <h3 class="auth-form__heading">Đăng ký</h3>
@@ -125,8 +335,7 @@
                                 <span class="auth-form__socials-text">Kết nối Google</span>
                             </a>
                         </div>
-                    </div> -->
-
+                    </div>
                 <!-- end register form -->
 
                 <!-- begin login -->
