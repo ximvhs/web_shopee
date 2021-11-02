@@ -36,20 +36,26 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -12px;
-    margin-right: -12px;
+    margin-left: -5px;
+    margin-right: -5px;
 }
 
 /* test */
 .grid__colum-2 {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 16.6667%;
 }
 
-.grid__colum-12 {
-    padding-left: 12px;
-    padding-right: 12px;
+.grid__colum-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__colum-10 {
+    padding-left: 5px;
+    padding-right: 5px;
     width: 83.3334%;
 }
 
@@ -60,6 +66,15 @@ html {
     }
     to  {
         opacity: 1;
+    }
+}
+
+@keyframes Circular {
+    from {
+        transform:  rotate(0);
+    }
+    to {
+        transform:  rotate(90deg);
     }
 }
 
@@ -113,6 +128,7 @@ html {
 /* button style */
 .btn {
     min-width: 124px;
+    background-color: var(--white-color);
     height: 34px;
     font-size: 1.3rem;
     padding: 0 12px;
@@ -147,6 +163,68 @@ html {
     color: var(--white-color);
 }
 
+/* begin selection */
+.select-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-color);
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 4px;
+    position: relative;
+    min-width: 200px;
+    font-size: 1.3rem;
+}
+
+.select-input-icon {
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1px;
+    display: block;
+}
+
+.select-input__list {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 70%;
+    padding: 4px;
+    list-style: none;
+    font-size: 1.4rem;
+    background-color: var(--white-color);
+    border-radius: 4px;
+    display: none;
+}
+
+.select-input__list::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
+    top: -10px;
+    right: 0;
+    left: 0;
+}
+
+.select-input__link {
+    color: var(--text-color);
+    display: block;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+.select-input__item a:hover {
+    color: var(--primary-color);
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+/* end selection */
 
 
 
