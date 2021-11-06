@@ -19,7 +19,7 @@
     position: relative;
     margin: 0 0.8rem;
     min-height: 1.6rem;
-    z-index: 1;
+    z-index: 3;
 }
 
 .header__navbar-item:hover,
@@ -84,6 +84,7 @@
     display: flex;
     justify-items: center;
     position: relative;
+    z-index: 3;
 }
 
 .header__navbar-user-img {
@@ -116,6 +117,10 @@
 
 .header__navbar-user:hover .header__navbar-user-menu {
     display: block;
+}
+
+.header__navbar-user-item {
+    z-index: 1;
 }
 
 .header__navbar-user-item a:hover {
@@ -176,6 +181,7 @@
     border-radius: 4px;
     display: none;
     animation: fadeIn ease .2s;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.3);
 }
 
 .header__qr::before {
@@ -225,7 +231,7 @@
     transform-origin: calc(100% - 20px) top;
     border-radius: 12px;
     cursor: context-menu;
-    z-index: 1;
+    /* z-index: 2; */
 }
 
 .header__notify::before {   
@@ -475,6 +481,7 @@
     display: inline-block;
     padding: 4px 8px;
     cursor: pointer;
+    z-index: 2;
 }
 
 .header__cart-icon {
@@ -556,6 +563,8 @@
 .header__cart-list-item {
     padding-left: 0;
     list-style: none;
+    height: 55vh;
+    overflow-y: auto;
 }
 
 .header__cart-item  {
@@ -566,6 +575,7 @@
 
 .header__cart-item:hover {
     background-color: #F8F8F8;
+    cursor: pointer;
 }
 
 .header__cart-img  {
@@ -588,10 +598,20 @@
 }
 
 .header__cart-item-name {
+    max-width: 180px;
     font-size: 1.4rem;
     font-weight: 400;
     color: var(--text-color);
     margin: 0;
+    line-height: 2rem;
+    max-height: 4rem;
+    flex: 1;
+    padding-right: 16px;
+    overflow:hidden ;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: left;
 }
 
 .header__cart-item-price {
@@ -713,6 +733,7 @@
     padding-left: 8px;
     position: relative;
     cursor: pointer;
+    z-index: 2;
 }
 
 .header__search-seletion-label {
@@ -1013,6 +1034,7 @@
 
 .home-product-item__heart {
     font-size: 1.4rem;
+    color: var(--primary-color);
 }
 
 .home-product-item__star--vote {
@@ -1109,3 +1131,62 @@
 }
 
 /* end product item */
+
+.home-product__pagination {
+    margin: 48px 0 32px 0;
+}
+
+/* footer */
+.footer {
+    border-top: 5px solid var(--primary-color);
+    padding-top: 24px;
+}
+
+.footer__heading {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.footer__list a {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 6px 0;
+
+}
+
+.footer__list a:hover {
+    color: var(--primary-color);
+}
+
+.footer__list i {
+    font-size: 1.8rem;
+    padding: 4px;
+    position: relative;
+    top: 3px;
+}
+
+.footer__download {
+    display: flex ;
+    justify-items: center;
+    align-items: center;
+}
+
+.footer__download-pr {
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer__download-apps {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+}
+
+.footer__download-apps img {
+    margin: 8px 0 8px 8px;
+    height: 16px;
+}
+
