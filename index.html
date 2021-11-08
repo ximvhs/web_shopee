@@ -44,7 +44,8 @@
                         </li>
                     </ul>
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-item"><a href="" class="header__navbar-item-link">
+                        <li class="header__navbar-item">
+                            <buttom class="header__navbar-item-link">
                             <i class="header__navbar-icon fas fa-bell"></i>
                             Thông báo
 
@@ -55,22 +56,23 @@
                                    <h3 class="header__notify-content-desrciotion">Đăng nhập để xem thông báo</h3>
                                </div>
                                <footer class="header__notify-foot">
-                                   <div class="header__notify-foot-register-register">Đăng ký</div>
-                                   <div class="header__notify-foot-register-login">Đăng nhập</div>
+                                   <div class="header__notify-foot-register-register js-register">Đăng ký</div>
+                                   <div class="header__notify-foot-register-login js-login">Đăng nhập</div>
                                </footer>
                             </div>
                             <!-- end thông báo -->
 
-                        </a></li>
+                            </buttom>
+                        </li>
                         <li class="header__navbar-item">
-                            <a href="" class="header__navbar-item-link">
+                            <buttom class="header__navbar-item-link js-noti">
                                 <i class="header__navbar-icon fas fa-question-circle"></i>
                             Trợ giúp
-                            </a>
+                            </buttom>
                         </li>
-                        <!-- <div class="header__navbar-item header__navbar-item--strong header__navbar-item--saparate">Đăng ký</div>
-                        <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li> -->
-                        <li class="header__navbar-item header__navbar-user">
+                        <button class="header__navbar-item header__navbar-item--strong header__navbar-item--saparate js-register">Đăng ký</button>
+                        <button class="header__navbar-item header__navbar-item--strong js-login">Đăng nhập</button>
+                        <!-- <li class="header__navbar-item header__navbar-user">
                             <img src="./assets/img/avt.jpg" alt="ảnh bị lỗi" class="header__navbar-user-img">
                             <span class="header__navbar-user-name">Vũ Hồng Sơn</span>
 
@@ -82,7 +84,7 @@
                                 </li>
                                 
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
 
@@ -213,7 +215,7 @@
                                     </li> 
                                 </ul>
 
-                                <button class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</button>
+                                <button class="header__cart-view-cart btn btn--primary js-noti">Xem giỏ hàng</button>
                             </div>
                         </div>
 
@@ -1458,17 +1460,17 @@
                 </div>
             </div>
         </footer>
-<!-- begin modal -->
-        <div class="modal">
-            <div class="modal__overlay"></div>
+    <!-- begin modal -->
+        <div class="modal js-show">
+            <!-- <div class="modal__overlay"></div> -->
                 <div class="modal__body">
 
                 <!-- begin register form -->
-                     <div class="auth-form">  
+                     <div class="auth-form js-auth-form">  
                         <div class="auth-form__container">
                             <div class="auth-form__header">
                                 <h3 class="auth-form__heading">Đăng ký</h3>
-                                <span class="auth-form__switch-btn">Đăng nhập</span>
+                                <span class="auth-form__switch-btn js-login">Đăng nhập</span>
                             </div>
 
                             <div class="auth-form__form">
@@ -1492,7 +1494,7 @@
                             </div>
 
                             <div class="auth-form__controls">
-                                <button class="btn btn--normal auth-form__controls--back">TRỞ LẠI</button>
+                                <button class="btn btn--normal auth-form__controls--back js-close">TRỞ LẠI</button>
                                 <button class="btn btn--normal btn--primary">ĐĂNG KÝ</button>
                             </div>
                         </div>
@@ -1509,13 +1511,16 @@
                         </div>
                     </div>
                 <!-- end register form -->
+                </div>
+        </div>
 
-                <!-- begin login -->
-                     <div class="auth-form"> 
+        <div class="modal js-show-login">
+            
+                     <div class="auth-form js-auth-form_login"> 
                         <div class="auth-form__container">
                             <div class="auth-form__header">
-                                <h3 class="auth-form__heading">Đăng nhập</h3>
-                                <span class="auth-form__switch-btn">Đăng ký</span>
+                                <h3 class="auth-form__heading ">Đăng nhập</h3>
+                                <button class="auth-form__switch-btn js-register ">Đăng ký</button>
                             </div>
 
                             <div class="auth-form__form">
@@ -1534,7 +1539,7 @@
                             </div>
 
                             <div class="auth-form__controls">
-                                <button class="btn btn--normal auth-form__controls--back">TRỞ LẠI</button>
+                                <button class="btn btn--normal auth-form__controls--back js-login_close">TRỞ LẠI</button>
                                 <button class="btn btn--normal btn--primary">ĐĂNG NHẬP</button>
                             </div>
                         </div>
@@ -1549,12 +1554,84 @@
                                 <span class="auth-form__socials-text">Kết nối Google</span>
                             </a>
                         </div>
-                    </div>
-                <!-- end login -->
-                </div>
+                    </div> 
         </div>
 <!-- end modal -->
     </div>
     
+    <script>
+        // open modal
+        const regBtns = document.querySelectorAll('.js-register')
+        const modal = document.querySelector('.js-show')
+        function showModal() {
+            modal.classList.add('open')
+            modal1.classList.remove('open')
+        }
+        for (const regBtn of regBtns) {
+            regBtn.addEventListener('click', showModal)
+        }
+        
+        
+        // close register
+        const closeBtns = document.querySelectorAll('.js-close')
+        function hideBtn(){
+            modal.classList.remove('open')
+        }
+        for (const closeBtn of closeBtns) {
+            closeBtn.addEventListener('click', hideBtn)
+        }
+        
+        // close when click outward
+        const authForms = document.querySelectorAll('.js-auth-form')
+        modal.addEventListener('click', hideBtn)
+        for (const authForm of authForms ) { 
+            authForm.addEventListener('click', function (event) {
+                event.stopPropagation()
+            })
+        }
+        
+        // open modal login 
+        const showLogins = document.querySelectorAll('.js-login')
+        const modal1 = document.querySelector('.js-show-login')
+        function showModalLogin() {
+            modal1.classList.add('open')
+            modal.classList.remove('open')
+        }
+        for (const showLogin of showLogins) {
+            showLogin.addEventListener('click', showModalLogin)
+        }
+        
+        // close Login 
+        const closeLoginBtns = document.querySelectorAll('.js-login_close')
+        function hideLoginBtn(){
+            modal1.classList.remove('open')
+        }
+        for (const closeLoginBtn of closeLoginBtns) {
+            closeLoginBtn.addEventListener('click', hideLoginBtn)
+        }
+        
+        // close when click outward
+        const authLoginForms = document.querySelectorAll('.js-auth-form_login')
+        modal1.addEventListener('click', hideLoginBtn)
+        for (const authLoginForm of authLoginForms ) { 
+            authLoginForm.addEventListener('click', function (event) {
+                event.stopPropagation()
+            })
+        }
+
+        </script>
+    
+    <!-- No function -->
+        <script>
+            // notification
+            const notifications = document.querySelectorAll('.js-noti')
+            function showNoti() {
+                alert('Hiện tại chức năng này chưa được cài đặt!')
+            }
+            for (const notification of notifications) {
+                notification.addEventListener('click', showNoti)
+            }
+        </script>
+
 </body>
 </html>
