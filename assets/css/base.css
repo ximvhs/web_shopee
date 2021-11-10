@@ -126,6 +126,84 @@ html {
     }
 }
 
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 12px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+/* Toast */
+
+#toast {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 4;
+}
+
+.toast {
+    background-color: #fff;
+    padding: 0 8px 0 0;
+    display: flex;
+    align-items: center;
+    border-left: 5px solid var(--primary-color);
+    height: 80px;
+    min-width: 300px;
+    max-width: 400px;
+    border-radius: 4px;
+    display: none;
+    animation: slideInLeft ease 0.5s, fadeOut ease 1s 6s forwards;
+    /* , fadeOut ease 1s 4s forwards */
+}
+
+.no_active {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.toast_icon {
+    color: var(--primary-color);
+    margin: 0 12px 0 12px;
+    font-size: 2rem;
+}
+
+.toast_body {
+    flex-grow: 1;
+}
+
+.toast_body h2 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.toast_body-msg {
+    font-size: 1.4rem;
+    margin: 8px 0 12px 0;
+}
+
+.toast_close {
+    color: var(--primary-color);
+    padding: 4px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.js-toast.show {
+    display: flex;
+}
+
+/* modal */
 .modal {
     position: fixed;
     z-index: 3;
