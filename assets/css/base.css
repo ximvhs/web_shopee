@@ -164,7 +164,6 @@ html {
     border-radius: 4px;
     display: none;
     animation: slideInLeft ease 0.5s, fadeOut ease 1s 6s forwards;
-    /* , fadeOut ease 1s 4s forwards */
 }
 
 .no_active {
