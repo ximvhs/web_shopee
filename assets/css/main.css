@@ -1,5 +1,8 @@
+.app{
+    overflow: hidden;
+}
 .header {
-    height: 12rem;
+    height: var(--header-height);
     background-image: linear-gradient(0, #fe6433, #f53e2d);
 }
 
@@ -449,6 +452,15 @@
     align-items: center;
 }
 
+.header__mobile-search {
+    margin-left: 8px;
+}
+
+.header__mobile-search-icon {
+    font-size: 2.4rem;
+    color: var(--white-color);
+}
+
 .header-with-logo {
     text-align: center;
     width: 220px;
@@ -467,6 +479,10 @@
 .header__logo-link {
     color: transparent;
     text-decoration: none;
+}
+
+.header__searchcheckbox:checked ~ .header__search {
+    display: flex;
 }
 
 .header__search {
@@ -572,7 +588,7 @@
 .header__cart-list-item {
     padding-left: 0;
     list-style: none;
-    height: 55vh;
+    max-height: 55vh;
     overflow-y: auto;
 }
 
@@ -830,6 +846,57 @@
 .header__search-option-item--active i {
     display: inline-block;
 }
+/* header sort bar */
+.header__sort-bar {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    left: 0;
+    height: var(--header-sor-bar-height);
+    padding: 0;
+    margin: 0;
+    height: 46px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    display: none;
+}
+
+.header__sort-item {
+    flex: 1;
+    background-color: var(--white-color);
+    display: block;
+    height: 100%;
+    text-align: center;
+    line-height: 46px;
+    position: relative;
+}
+
+.header__sort-link--active {
+    color: var(--primary-color);
+}
+
+
+.header__sort-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 60%;
+    border-left: 1px solid #999;
+    transform: translateY(-50%);
+}
+
+.header__sort-item:first-child.header__sort-item::before {
+    display: none;
+}
+
+.header__sort-link {
+    font-weight: 405;
+    font-size: 1.4rem;
+    display: block;
+    height: 100%;
+}
+
 
 /* container */
 .app_container {
@@ -995,6 +1062,7 @@
 /* begin product item */
 .home-product {
     margin-bottom: 12px;
+    padding-left: 0;
 }
 
 .home-product-item {
@@ -1262,7 +1330,7 @@
 .footer_policy-list-item {
     font-size: 1.2rem;
     display: inline-block;
-    padding: 0 26px 0 26px;
+    padding: 8px 26px 2px 26px;
     color: rgba(0,0,0, 0.54);
     border-right: 1px solid var(--border-color);
 }
