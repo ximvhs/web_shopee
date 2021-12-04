@@ -88,6 +88,15 @@
         text-align: center;
         padding: 12px 12px;
     }
+    .footer_policy {
+        padding: 0 26px;
+    }
+    .footer_policy-img img {
+        margin: 0;
+    }
+    .footer_policy-address2 a {
+        padding:16px 4px 16px 4px;
+    }
     @keyframes mobileSearchSideIn {
         from{
             opacity: 0;
