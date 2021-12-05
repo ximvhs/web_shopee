@@ -97,6 +97,13 @@
     .footer_policy-address2 a {
         padding:16px 4px 16px 4px;
     }
+    .c-12-mobile {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .header__cart-list {
+        max-width: 350px;
+    }
     @keyframes mobileSearchSideIn {
         from{
             opacity: 0;

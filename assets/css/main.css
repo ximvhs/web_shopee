@@ -1181,7 +1181,7 @@
     border-left: 4px solid transparent;
     /* giảm độ sáng */
     filter: brightness(60%);
-    top: 14px;
+    top: 16px;
     left: 0px;
 }
 
