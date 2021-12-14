@@ -1107,14 +1107,18 @@
 }
 
 .home-product-item__price {
-    padding: 0 10px;
+    display: flex;
+    margin: 10px;
     align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .home-product-item__price-old {
     font-size: 1.4rem;
     color: #666;
     text-decoration: line-through;
+    
     margin-right: 4px;
 }
 
@@ -1128,6 +1132,7 @@
     display: flex;
     justify-content: space-between;
     margin: 12px 10px;
+    flex-wrap: wrap;
 }
 
 .home-product-item__heart {
@@ -1141,7 +1146,10 @@
 
 .home-product-item__rating {
     color: #D5D5D5;
-    margin: 0 0 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* margin: 0 0 0 auto; */
 }
 
 .home-product-item__sold {
